@@ -35,3 +35,10 @@ color: white;
     right: 47%;
     bottom: -250px;
 }
+.hidden {
+    display: none;
+}
+input {
+    color: white !important;
+   
+}
