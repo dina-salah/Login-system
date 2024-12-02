@@ -1,0 +1,37 @@
+.body , .form-control{
+    background-color: #24353F;
+    
+}
+
+h1{
+    color: #17A2B8;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 500;
+    font-size: 48px;
+}
+
+.inner-col{
+    box-shadow: 5px 5px 30px  black;
+}
+.form-control::placeholder{
+    color: white;
+    opacity: 0.6;
+}
+.form-control:focus{
+    background-color: #24353F;
+    box-shadow: none;
+    border: 1px solid #17A2B8;
+}
+.btn:hover{
+color: white;
+}
+
+#home{
+    background-color: rgb(226, 240, 240);
+    height: 100%; 
+}
+
+#Logout{
+    right: 47%;
+    bottom: -250px;
+}
