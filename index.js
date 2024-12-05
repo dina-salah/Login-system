@@ -12,9 +12,7 @@ var signUPBtn = document.getElementById("signUPBtn");
 var go_to_login = document.getElementById("go_to_login");
 
 var staticBackdrop = new bootstrap.Modal(document.getElementById("staticBackdrop"));
-// home page
-var userName = document.getElementById("userName");
-var Logout = document.getElementById("Logout");
+
 
 var users = [];
 // fill the array from local storage
@@ -62,7 +60,7 @@ signUPBtn.addEventListener("click", () => {
         reset();
         localStorage.setItem('users', JSON.stringify(users));
     } else {
-        alert('erorr')
+        staticBackdrop.show();
     }
 })
 
@@ -96,18 +94,14 @@ function isValid() {
 
 function emailvalidation() {
     if (userEmailRegex.test(signUpEmail.value) == true) {
-        console.log("tt")
         signUpEmail.classList.remove('is-invalid')
         signUpEmail.classList.add('is-valid')
 
-        console.log(`name true+ ${signUpEmail.value}`)
     } else if (userEmailRegex.test(signUpEmail.value) == false) {
-        console.log("fffff")
 
         signUpEmail.classList.add('is-invalid')
         signUpEmail.classList.remove('is-valid')
 
-        console.log(`name false+ ${signUpEmail.value}`)
     }
 }
 
@@ -152,18 +146,3 @@ function reset() {
     loginEmail.value = '';
     loginPass.value = '';
 }
-
-
-// document.addEventListener('DOMContentLoaded', function () {
-//     var name = localStorage.getItem('current_user')
-//     if(userName && name ){
-//         userName.innerHTML = name;
-//     console.log(name)
-//     }else{
-//     console.log('name error')
-        
-//     }
-
-// })
-// name in home
-//  logout
